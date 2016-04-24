@@ -1,0 +1,12 @@
+<h2>Performance API</h2>
+<pre><code>document.addEventListener('load',function () {
+    var t = window.performance.timing, metrics = [];
+    metrics.push({name:'ttfb',value:t.responseStart - t.fetchStart});
+    metrics.push({name:'dom',value:t.loadEventStart - t.domLoading});
+    metrics.push({name:'load',value:t.loadEventStart - t.fetchStart});
+    var img = document.createElement('img');
+    img.src = 'http://mycollector/?'
+        +metrics.map(function (m) { return m.name+'='+m.value}).join('&');
+    document.body.appendChild(img);
+});
+</code></pre>

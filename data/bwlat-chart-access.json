@@ -1,0 +1,130 @@
+{
+  "width": 1024,
+  "height": 600,
+  "data": [
+    {
+      "name": "bwlat",
+      "url": "data/bwlat-access.csv",
+      "format": {"type": "csv", "parse": {"date":"date", "bandwidth":"number","latency":"number"}}
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "time",
+      "range": "width",
+      "domain": {"data": "bwlat", "field": "date"}
+    },
+    {
+      "name": "y",
+      "type": "log",
+      "range": "height",
+      "nice": true,
+      "domainMin": 1,
+      "domain": {"data": "bwlat", "field": "bandwidth"}
+    },
+    {
+      "name": "yalt",
+      "type": "log",
+      "range": "height",
+      "domainMin": 1,
+      "domain": {"data": "bwlat", "field": "bandwidth"}
+    },
+    {
+      "name": "color", "type": "ordinal", "range": ["#b10142","orange"]
+    }
+  ],
+  "axes": [
+    {
+      "type": "x", "title": "Année", "titleOffset": 60, "scale": "x",
+      "properties": {
+        "ticks": { "stroke": {"value": "white"} },
+        "majorTicks": { "strokeWidth": {"value": 2} },
+        "labels": {
+          "fill": {"value": "white"},
+          "fontSize": {"value": 24}
+        },
+        "title": {
+          "fill": {"value": "white"},
+          "fontSize": {"value": 24}
+        },
+        "axis": {
+          "stroke": {"value": "#eee"},
+          "strokeWidth": {"value": 2}
+        }
+      }
+    },
+    {
+      "type": "y", "title": "Bande passante (kbps)",  "titleOffset": 100, "scale": "y",
+      "values": [1,2,5,10,20,50,100,200,500,1000,2000,5000,10000,20000,50000,100000,200000,500000,1000000], "format":"r",
+      "grid":true,
+      "properties": {
+        "ticks": { "stroke": {"value": "orange"} },
+        "majorTicks": { "strokeWidth": {"value": 2} },
+        "labels": {
+          "fill": {"value": "orange"},
+          "fontSize": {"value": 24}
+        },
+        "grid": {
+          "stroke": {"value": "rgba(255,255,255,1.0)"},
+          "opacity": {"value": 0.8},
+          "strokeWidth": {"value": 2}
+        },
+        "title": {
+          "fill": {"value": "orange"},
+          "fontSize": {"value": 24}
+        },
+        "axis": {
+          "stroke": {"value": "orange"},
+          "strokeWidth": {"value": 2}
+        }
+      }
+    },
+    {
+      "type": "y", "title": "Latence (msec)",  "titleOffset": 100, "scale": "yalt","orient":"right",
+      "format":"r", "values": [1,2,5,10,20,50,100,200,500,1000],
+      "properties": {
+        "ticks": { "stroke": {"value": "#b10142"} },
+        "majorTicks": { "strokeWidth": {"value": 2} },
+        "labels": {
+          "fill": {"value": "#b10142"},
+          "fontSize": {"value": 24}
+        },
+        "title": {
+          "fill": {"value": "#b10142"},
+          "fontSize": {"value": 24}
+        },
+        "axis": {
+          "stroke": {"value": "#b10142"},
+          "strokeWidth": {"value": 2}
+        }
+      }
+    }
+  ],
+  "marks": [
+    {
+      "type": "line",
+      "from": {"data": "bwlat"},
+      "properties": {
+        "enter": {
+          "x": {"scale": "x", "field": "date"},
+          "y": {"scale": "y", "field": "bandwidth"},
+          "stroke": { "scale":"color", "value": 0 },
+          "strokeWidth": {"value": 6}
+        }
+      }
+    },
+    {
+      "type": "line",
+      "from": {"data": "bwlat"},
+      "properties": {
+        "enter": {
+          "x": {"scale": "x", "field": "date"},
+          "y": {"scale": "yalt", "field": "latency"},
+          "stroke": { "scale":"color", "value": 1 },
+          "strokeWidth": {"value": 6}
+        }
+      }
+    }
+  ]
+}

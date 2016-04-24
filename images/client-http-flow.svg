@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="283px" height="364px" viewBox="0 0 283 364" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>client-http-flow</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M69,23.5 L69,361.5" id="Line" stroke="#979797" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M269,23.5 L269,361.5" id="Line-copy" stroke="#979797" stroke-width="4" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+        <path d="M78,50 L261,99" id="Line" stroke="#FAA530" stroke-width="4" stroke-linecap="square" fill="#FAA530" sketch:type="MSShapeGroup"></path>
+        <path id="Line-decoration-1" d="M260.568632,98.8844971 C257.18884,96.892537 254.291875,95.1851426 250.912083,93.1931825 C250.368922,95.2217228 249.903356,96.9604717 249.360194,98.9890121 C253.283148,98.9524319 256.645679,98.9210774 260.568632,98.8844971 C260.568632,98.8844971 260.568632,98.8844971 260.568632,98.8844971 Z" stroke="#FAA530" stroke-width="4" stroke-linecap="square" fill="#FAA530"></path>
+        <path d="M264.5,108.5 L79,158" id="Line-copy" stroke="#50E3C2" stroke-width="4" stroke-linecap="square" fill="#50E3C2" sketch:type="MSShapeGroup"></path>
+        <path id="Line-copy-decoration-1" d="M79.9573902,157.744524 C83.8803107,157.784448 87.2428141,157.818668 91.1657347,157.858592 C90.6243026,155.829589 90.1602179,154.090444 89.6187858,152.061442 C86.2372973,154.050521 83.3388786,155.755445 79.9573902,157.744524 C79.9573902,157.744524 79.9573902,157.744524 79.9573902,157.744524 Z" stroke="#50E3C2" stroke-width="4" stroke-linecap="square" fill="#50E3C2"></path>
+        <path d="M77,170 L261,217" id="Line-copy" stroke="#FAA530" stroke-width="4" stroke-linecap="square" fill="#FAA530" sketch:type="MSShapeGroup"></path>
+        <path id="Line-copy-decoration-1" d="M260.120376,216.775313 C256.717831,214.822472 253.801364,213.148607 250.398819,211.195766 C249.879094,213.230437 249.433614,214.97444 248.913889,217.009111 C252.836159,216.927282 256.198105,216.857142 260.120376,216.775313 C260.120376,216.775313 260.120376,216.775313 260.120376,216.775313 Z" stroke="#FAA530" stroke-width="4" stroke-linecap="square" fill="#FAA530"></path>
+        <path d="M261,227 L78,280" id="Line-copy-2" stroke="#50E3C2" stroke-width="4" stroke-linecap="square" fill="#50E3C2" sketch:type="MSShapeGroup"></path>
+        <path id="Line-copy-2-decoration-1" d="M78.4998008,279.855249 C82.4226891,279.812261 85.7851648,279.775415 89.7080531,279.732427 C89.1238633,277.71532 88.6231293,275.986371 88.0389396,273.969263 C84.700241,276.029358 81.8384994,277.795154 78.4998008,279.855249 C78.4998008,279.855249 78.4998008,279.855249 78.4998008,279.855249 Z" stroke="#50E3C2" stroke-width="4" stroke-linecap="square" fill="#50E3C2"></path>
+        <text id="Open" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#000000">
+            <tspan x="0" y="43">Open</tspan>
+            <tspan x="0" y="57">Connection</tspan>
+        </text>
+        <text id="Client" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#000000">
+            <tspan x="54" y="10">Client</tspan>
+        </text>
+        <text id="Server" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#000000">
+            <tspan x="247" y="10">Server</tspan>
+        </text>
+        <text id="Close" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#000000">
+            <tspan x="0" y="296">Close</tspan>
+            <tspan x="0" y="310">Connection</tspan>
+        </text>
+    </g>
+</svg>

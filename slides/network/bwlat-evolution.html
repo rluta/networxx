@@ -1,0 +1,30 @@
+<h2>Evolution bande passante vs latence</h2>
+<style>
+    .bwlat .button {
+        display: inline-block;
+        padding: 3px 10px;
+        margin: 0px 10px;
+    }
+
+    .bwlat .button.active {
+        background-color: darkorange;
+        border-radius: 3;
+    }
+</style>
+<div id="bwlat-toolbars" class="row bwlat">
+    <div class="row" style="margin-right: auto">
+
+        <a class="active item" data-source="data/bwlat-chart-access.json">Réseaux d'accès</a> <!--|
+        <a class="item" data-source="data/bwlat-chart-ethernet.json">Ethernet</a>
+        -->
+    </div>
+    <div class="row">
+        <div class="button disabled">Echelle :</div>
+        <div id="bwlat-log" class="button active">log</div>
+        <div id="bwlat-linear" class="button">linear</div>
+    </div>
+</div>
+<div class="flex-column center">
+    <div data-chart="vg"></div>
+    <p class="fragment">Sur les 20 dernières années, la bande passante a évolué 1000 fois plus vite que la latence</p>
+</div>

@@ -1,0 +1,36 @@
+<style>
+    html.h2demo .btn {
+        padding: 0.3em;
+        background-color: purple;
+        border-radius: 4px;
+        margin: 0.3em;
+        cursor: pointer;
+    }
+    html.h2demo .btn.active {
+        background-color: orange;
+    }
+    html.h2demo .metric {
+        text-align: center;
+        border: 2px solid white;
+        margin: 0.5em 10px;
+        padding: 0.3em 1em;
+    }
+    html.h2demo .metric-value {
+        font-size: 1.5em;
+        font-weight: 900;
+    }
+</style>
+<h2>Demo</h2>
+<div class="flex-column center fullsize">
+    <div class="row center fill" data-container="metrics">
+
+    </div>
+    <iframe id="h2-demo" class="fill" style="width:100%; min-height: 600px"></iframe>
+    <div class="row fill center">
+        <div class="btn btn-default" name="http" data-url="http://192.168.99.100:8080/"> HTTP/1.1 </div>
+        <div class="btn btn-default" name="https" data-url="https://192.168.99.100/"> HTTPS </div>
+        <div class="btn btn-default" name="h2" data-url="https://192.168.99.100:8443/"> H2 </div>
+        <div class="btn btn-default" name="h2push" data-url="https://192.168.99.100:8444/"> H2+PUSH </div>
+    </div>
+</div>
+

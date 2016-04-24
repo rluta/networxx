@@ -1,0 +1,57 @@
+{
+  "data":{"url":"/data/perf-web.json"},
+  "mark":"line",
+  "encoding": {
+    "x": {"field":"percentile","type":"quantitative","axis":{"title":"Percentiles"}},
+    "y": {"field":"timing","type":"quantitative","axis":{"title":"Temps mesuré (ms)"}},
+    "color":{"field":"type","type":"nominal","legend":false,"scale":{"range":["#b10142","orange"]}}
+  },
+  "config": {
+    "cell": {
+      "width": 900,
+      "height": 700
+    },
+    "mark": {
+      "strokeWidth":5
+    },
+    "axis": {
+      "properties": {
+        "ticks": {
+          "stroke": {"value": "white"}
+        },
+        "labels": {
+          "fill": {"value": "white"},
+          "fontSize": {"value": 30}
+        },
+        "title": {
+          "fill": {"value": "white"},
+          "fontSize": {"value": 30}
+        },
+        "axis": {
+          "stroke": {"value": "white"},
+          "strokeWidth": {"value": 2}
+        }
+      }
+    },
+    "legend": {
+      "properties": {
+        "title": {
+          "fontSize": {"value": 30},
+          "fill": {"value":"white"}
+        },
+        "labels": {
+          "fontSize": {"value": 24},
+          "fill": {"value":"white"}
+        },
+        "symbols": {
+          "filled":true,
+          "stroke": {"value": "transparent"}
+        },
+        "legend": {
+          "fontSize": {"value": 24},
+          "strokeWidth": {"value": 2}
+        }
+      }
+    }
+  }
+}

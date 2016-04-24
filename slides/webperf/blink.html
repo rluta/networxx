@@ -1,0 +1,23 @@
+<h2>Expérience Google/Blink </h2>
+<div class="row center">
+    <chart type="vega-lite" style="height: 700px;">
+        <spec>
+        {
+            "description": "Time spent rendering page in Blink",
+            "data": {"url":"/data/blink-perf.csv","type":"csv"},
+            "mark": "bar",
+            "encoding": {
+                "y": {
+                    "field": "category", "type": "nominal", "scale": { "bandSize" : 100},
+                    "sort": { "field": "elapsed", "op":"sum","order":"descending"} ,
+                    "axis": { "title": "Catégorie" }
+                },
+                "x": {
+                    "field": "elapsed", "type": "quantitative", "aggregate":"sum",
+                    "axis": { "title": "Poucentage du temps de traitement", "grid": "true" }
+                }
+            }
+        }
+        </spec>
+    </chart>
+</div>

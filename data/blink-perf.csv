@@ -1,0 +1,13 @@
+name,elapsed,category
+Network,69.5,network
+EvaluateScript,6.6,scripting
+Layout,5.1,layout
+Paint,4.5,paint
+Program,3.8,other
+FunctionCall,3.4,other
+ParseHTML,1.9,parsing
+ResourceReceivedData,1.6,network
+RecalculateStyles,1.5,layout
+DecodeImage,0.7,paint
+GCEvent,0.6,other
+Other,0.6,other

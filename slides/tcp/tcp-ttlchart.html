@@ -1,0 +1,141 @@
+<style>
+    ul.dropdown {
+        display: none;
+        margin-left: 0px;
+        background: purple;
+        width: 7em;
+        margin-right: -2em;
+        list-style: none;
+        font-size: 0.9em;
+    }
+    .dropdown-menu:hover > ul.dropdown {
+        display: inherit;
+    }
+    .dropdown-menu > ul.dropdown > li:hover {
+        display: inherit;
+    }
+
+    .ttl-menu {
+        margin-top: 2em;
+        border: 2px solid black;
+    }
+
+    .ttl-menu > div {
+        border: 2px solid grey;
+    }
+
+    .ttl-menu .ttl-item {
+        flex: 1 0 20%;
+        font-size: 0.8em;
+    }
+
+    #ttl-summary {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    ul.ttl-summary {
+        flex: 1;
+        list-style: none;
+        font-size: 1.1em;
+    }
+
+    ul.ttl-networks {
+        list-style: none;
+    }
+
+    ul.ttl-networks > li {
+        display: inline-block;
+        width: 6em;
+    }
+
+    ul.ttl-networks > li.active {
+        border-top: 4px solid white;
+        margin-top: -2px;
+        font-weight: 800;
+    }
+
+    .ttl-summary .time {
+        font-weight: 800;
+    }
+
+    .ttl-summary .time:after {
+        content: ' ms'
+    }
+    .toggle {
+        opacity: 0.4;
+    }
+
+    .toggle.active {
+        opacity: 1;
+        font-weight: 800;
+    }
+
+    .label[data-property], .label[data-payload] {
+        cursor: move
+    }
+
+    .ttl-networks > .item:nth-of-type(1) {
+        color: #1f77b4;
+    }
+
+    .ttl-networks > .item:nth-of-type(2) {
+        color: #ff7f0e
+    }
+
+    .ttl-networks > .item:nth-of-type(3) {
+        color: #2ca02c
+    }
+
+    .ttl-networks > .item:nth-of-type(4) {
+        color: #d62728
+    }
+
+</style>
+<h2 id="ttl-title">Temps de transfert :
+    <span data-payload="200" data-min="1" data-max="1000" data-step="1" class="ui large label">200</span>
+    KB
+</h2>
+<div style="display: flex;">
+    <div data-container="chart" id="ttl-chart" data-chart="vg" style="flex: 1 0 80%"></div>
+    <div data-container="timings" id="ttl-summary" style="flex: 0 0 20%"></div>
+</div>
+<div class="ttl-menu">
+    <div class="row">
+        <ul id="ttl-networks" data-container="networks" class="fill ttl-networks small">
+            <li data-net="adsl0" class="item active">Adsl</span></li>
+        </ul>
+        <div class="toggle active" id="ttl-dack" style="margin-left: 1em;">D.Ack</div>
+        <div class="button" id="ttl-reset" style="margin-left: 1em; margin-right: 1em;">Raz</div>
+        <div class="dropdown-menu" style="position: relative; padding-right: 1em;">
+            <span>+</span>
+            <ul class="dropdown small" style="position: absolute; right: 30px; bottom: 30px; z-index: 1">
+                <li class="item" data-network="adsl">Adsl</li>
+                <li class="item" data-network="adsl2">Adsl Win</li>
+                <li class="item" data-network="fibre">Cable</li>
+                <li class="item" data-network="ethernet">Ethernet</li>
+                <li class="item" data-network="mobile">3G</li>
+            </ul>
+        </div>
+    </div>
+    <div id='ttl-properties' data-container="properties" class="row" data-net="adsl">
+        <div class="ttl-item">
+            Bande passante (Mbps): <div data-property="bw" data-step="1" data-min="1" data-max="1000" class=" label">0</div>
+        </div>
+        <div class="ttl-item">
+            RTT (ms): <div data-property="rtt" data-step="0.5" data-min="0.5" data-max="1000" class="label">0</div>
+        </div>
+        <div class="ttl-item">
+            Rwnd (kB): <div data-property="rwnd" data-step="8" data-min="16" data-max="1512" class="label">0</div>
+        </div>
+        <div class="ttl-item">
+            Cwmd (p.): <div data-property="cwnd" data-step="1" data-min="3" data-max="10" class="label">0</div>
+        </div>
+        <div class="ttl-item">
+            MTU (B): <div data-property="mtu" data-step="1" data-min="1300" data-max="9000" class="label">0</div>
+        </div>
+    </div>
+</div>

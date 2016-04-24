@@ -1,0 +1,86 @@
+<section data-background="images/tuning-car.jpg">
+    <div class="fullpage row">
+        <div class="fill"></div>
+        <div class="fill fullpage center flex-column">
+            <h3 class="centered splash tertiary" style="padding: 1em;">Un petit tuning pour la route ?</h3>
+        </div>
+    </div>
+</section>
+<style>
+    span.cmd {
+        display: inline-block;
+        float: right;
+        clear: right;
+        font-family: monospace;
+        font-size: 0.9em;
+    }
+    span.left-cmd {
+        display: inline-block;
+        float: left;
+        clear: left;
+        font-family: monospace;
+        font-size: 0.9em;
+    }
+</style>
+<section>
+    <h2>Gérer beaucoup de connexions</h2>
+
+    <div class="flex-column fullsize">
+        <h3>Vérifier les limites de file descriptor</h3>
+        <ul>
+            <li>Nombre max de FD pour système <span class="cmd">/proc/sys/fs/file-max</span></li>
+            <li>Nombre max de FD par user <span class="cmd">ulimit</span></li>
+        </ul>
+        <h3>Augmenter les limites de connexion</h3>
+        <ul>
+            <li>Nb max. de nouvelles connexions <span class="cmd">net.core.somaxconn</span></li>
+            <li>Nb max. de paquets en attente <span class="cmd">net.core_netdev_backlog</span></li>
+            <li>Nb max. de ports disponibles <span class="cmd">net.ipv4.ip_local_port_range</span></li>
+        </ul>
+        <h3>Recycler plus vite les ports</h3>
+        <ul>
+            <li>Durée de TIME_WAIT_2 <span class="cmd">net.ipv4.tcp_fin_timeout</span></li>
+            <li>Réutiliser socket en TIME_WAIT <span class="cmd">net.ipv4.tcp.tcp_tw_reuse</span></li>
+        </ul>
+    </div>
+
+</section>
+
+<section>
+    <h2>Améliorer sa performance TCP (front)</h2>
+
+    <div class="flex-column fullsize">
+        <h3>Minimiser slow-start</h3>
+        <ul>
+            <li>Désactiver after idle <span class="cmd">net.ipv4.tcp_slow_start_after_idle</span></li>
+        </ul>
+        <h3>Ajustement de fenêtres et buffers</h3>
+        <ul>
+            <li>Vérifier <span class="cmd">net.ipv4.tcp_window_scaling</span></li>
+            <li>Fenêtre max (write) <span class="cmd">net.core.wmem_max</span></li>
+            <li>Fenêtre max (read) <span class="cmd">net.core.rmem_max</span></li>
+            <li>Buffers TCP cnx (read) <span class="cmd">net.ipv4.tcp_rmem</span></li>
+            <li>Buffers TCP cnx (write) <span class="cmd">net.ipv4.tcp_wmem</span></li>
+            <li>Mémoire max pour TCP <span class="cmd">net.ipv4.tcp_mem</span></li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>Améliorer sa performance TCP (back)</h2>
+
+    <div class="flex-column fullsize">
+
+    <h3>Fail fast</h3>
+    <ul>
+        <li>Retries SYN <span class="cmd">net.ipv4.tcp_syn_retries</span></li>
+        <li>Retries SYN-ACK <span class="cmd">net.ipv4.tcp_synack_retries</span></li>
+    </ul>
+    <h3>Ajuster keep-alive TCP</h3>
+    <ul>
+        <li>Temps attente min <span class="cmd">net.ipv4.tcp_keepalive_time</span></li>
+        <li>Intervalle entre probe <span class="cmd">net.ipv4.tcp_keepalive_intvl</span></li>
+        <li>Nombre de probes avant échec <span class="cmd">net.ipv4.tcp_keepalive_probes</span></li>
+    </ul>
+    </div>
+</section>

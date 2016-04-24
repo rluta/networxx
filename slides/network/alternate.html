@@ -1,0 +1,84 @@
+<h2>Une autre vue des réseaux</h2>
+<style>
+    html.alternate g.arrow {
+        stroke: #b10142;
+        fill: #b10142;
+        stroke-linecap:"square";
+    }
+
+    html.alternate g.arrow .line {
+        stroke-width: 5px;
+        fill: none;
+    }
+
+    html.alternate g.arrow .triangle {
+        stroke: none;
+    }
+
+    html.alternate .caption {
+        position: absolute;
+        z-index:1;
+        color: #000;
+    }
+
+    html.alternate .large.caption {
+        font-size: 5rem;
+        font-weight: 700;
+        color: #b10142;
+        text-shadow: 0.05em 0.05em 0.1em #888;
+        vertical-align: middle;
+        text-align: center;
+    }
+</style>
+<div style="height: 800px; position: relative; text-align: center; background: no-repeat center url('images/road-elements.jpg');">
+    <div class="fragment roll-in caption" style="position: absolute; top: 190px; left: 750px">
+        <div>Full Duplex</div>
+        <svg width="390px" height="100px" viewBox="0 0 390 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <g class="arrow">
+                <path class="line" d="M170,0 L170,90"></path>
+                <path class="triangle" d="M160,80 L180,80 L170,100 M160,80"></path>
+            </g>
+            <g class="arrow">
+                <path class="line" d="M210,0 L210,90"></path>
+                <path class="triangle" d="M200,80 L220,80 L210,100 M200,80"></path>
+            </g>
+        </svg>
+    </div>
+    <div class="caption" style="top: 550px; right: 310px">
+        <svg width="450px" height="15px" viewBox="0 0 450 15" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <g id="line" class="arrow">
+                <path class="line" d="M10,7.5 L440,7.5"></path>
+                <path class="triangle"  d="M0,7.5 L20,0 L20,15 M0,7.5"></path>
+                <path class="triangle" d="M450,7.5 L430,0 L430,15 M450,7.5"></path>
+            </g>
+        </svg>
+        <div>Bande passante</div>
+    </div>
+    <div class="fragment roll-in caption" style="top: 490px; right: 530px">
+        MTU
+        <svg width="150px" height="15px" viewBox="0 0 150 15" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <g class="arrow">
+                <path class="line" d="M10,7.5 L140,7.5"></path>
+                <path class="triangle" d="M0,7.5 L20,0 L20,15 M0,7.5"></path>
+                <path class="triangle" d="M150,7.5 L130,0 L130,15 M150,7.5"></path>
+            </g>
+        </svg>
+    </div>
+    <div class="caption" style="top: 270px; left: 1490px">
+        <div>Latence</div>
+        <svg width="120px" height="180px" viewBox="0 0 120 180" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <g class="arrow">
+                <path class="line" d="M60,0 L60,90 L100,90 L100,170 L20,170 L20,90 L60,90 M60,90"></path>
+            </g>
+        </svg>
+    </div>
+    <div class="fragment roll-in caption" style="top: 500px; left: 510px">
+        Jitter
+        <svg width="60px" height="15px" viewBox="0 0 60 15" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <g class="arrow">
+                <path class="line" d="M0,7.5 L50,7.5"></path>
+                <path class="triangle" d="M60,7.5 L40,0 L40,15 M60,7.5"></path>
+            </g>
+        </svg>
+    </div>
+</div>

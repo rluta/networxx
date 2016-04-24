@@ -1,0 +1,12 @@
+[
+  {"lat_ms":200,"bw_mbps":5,"plt_ms":3418,"ref":"0"},
+  {"lat_ms":180,"bw_mbps":5,"plt_ms":3151,"ref":"0"},
+  {"lat_ms":160,"bw_mbps":5,"plt_ms":2874,"ref":"0"},
+  {"lat_ms":140,"bw_mbps":5,"plt_ms":2572,"ref":"0"},
+  {"lat_ms":120,"bw_mbps":5,"plt_ms":2291,"ref":"0"},
+  {"lat_ms":100,"bw_mbps":5,"plt_ms":2017,"ref":"0"},
+  {"lat_ms":80,"bw_mbps":5,"plt_ms":1732,"ref":"0"},
+  {"lat_ms":60,"bw_mbps":5,"plt_ms":1450,"ref":"1"},
+  {"lat_ms":40,"bw_mbps":5,"plt_ms":1201,"ref":"0"},
+  {"lat_ms":20,"bw_mbps":5,"plt_ms":981,"ref":"0"}
+]

@@ -1,0 +1,24 @@
+<style>
+    .localhost pre strong {
+        color: red;
+        font-weight: 800;
+    }
+</style>
+<h2>Localhost</h2>
+<div style="font-size: 1.5em;">
+
+    <div class="localhost" style="margin-top: 3em;">
+<pre style="border:none; box-shadow: none">
+<b>raphael$ ifconfig lo0</b>
+lo0: flags=8049&lt;UP,LOOPBACK,RUNNING,MULTICAST&gt; <strong>mtu 16384</strong>
+<br />
+<b>raphael$ ping localhost</b>
+PING localhost (127.0.0.1): 56 data bytes
+64 bytes from 127.0.0.1: icmp_seq=0 ttl=64 time=<strong>0.050 ms</strong>
+<br />
+<b>raphael$ iperf -s -p 8888</b>
+...
+[ ID] Interval       Transfer     Bandwidth
+[  4]  0.0-10.0 sec  43.6 GBytes  <strong>37.4 Gbits/sec</strong>
+</pre>
+    </div>

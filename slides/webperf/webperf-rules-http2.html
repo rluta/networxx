@@ -1,0 +1,46 @@
+<style>
+    ul > li.nope {
+        text-decoration: line-through;
+        color: red;
+    }
+    ul > li.ok {
+        color: lightgreen;
+    }
+
+    ul > li.maybe {
+        color: #b10142;
+    }
+    ul > li.probably {
+        color: orange;
+    }
+</style>
+<div style="position: relative;">
+    <div class="flex-column center fullsize fragment fade-out" style="position: absolute;width: 100%" data-fragment-index="1">
+        <h2>Recettes http/1.1</h2>
+        <ul class="centered" style="font-size: 1.5em; list-style: none; padding-left: 0; margin-left: 0">
+            <li>Utiliser un CDN</li>
+            <li>Activer la compression des données</li>
+            <li>Minifier les scripts</li>
+            <li>Inliner les petits contenus</li>
+            <li>Concaténer les scripts</li>
+            <li>Créer des sprites</li>
+            <li>Minimiser le poids des images</li>
+            <li>Rendre les ressources non critiques asynchrones</li>
+            <li>Faire du sharding</li>
+        </ul>
+    </div>
+    <div class="flex-column center fullsize fragment fade-in" style="position: absolute;width: 100%" data-fragment-index="1">
+        <h2>Recettes http/2</h2>
+        <ul class="centered" style="font-size: 1.5em;  list-style: none; padding-left: 0; margin-left: 0;">
+            <li class="ok">Utiliser un CDN</li>
+            <li class="ok">Activer la compression des données</li>
+            <li class="ok">Minifier les scripts</li>
+            <li class="nope">Inliner les petits contenus</li>
+            <li class="maybe">Concaténer les scripts</li>
+            <li class="maybe">Créer des sprites</li>
+            <li class="ok">Minimiser le poids des images</li>
+            <li class="maybe">Rendre les ressources non critiques asynchrones</li>
+            <li class="nope">Faire du sharding</li>
+        </ul>
+    </div>
+</div>

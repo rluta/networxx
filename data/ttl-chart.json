@@ -1,0 +1,102 @@
+{
+	"width": 1400,
+	"height": 700,
+	"data": [
+		{
+			"name": "ttl",
+			"format": {"type": "json" }
+		}
+	],
+	"scales": [
+		{
+			"name": "g",
+			"type": "ordinal",
+			"range": "height",
+			"padding":0.1,
+			"domain": {"data": "ttl", "field": "name"}
+		},
+		{
+			"name": "x",
+			"type": "linear",
+			"range": "width",
+			"domain": {"data": "ttl","field": "receive"}
+		},
+		{"name": "color", "type": "ordinal", "range": "category10"}
+	],
+	"axes": [
+		{"type": "x", "scale": "x"}
+	],
+	"marks": [
+		{
+			"type": "group",
+			"from": {
+				"data":"ttl",
+				"transform": [{ "type": "facet", "groupby": ["name"] }]
+			},
+			"scales": [   {
+				"name": "y",
+				"type": "linear",
+				"range": "height",
+				"domain": {"data": "ttl","field": "bytes"}
+			}],
+			"axes": [
+				{ "type": "y", "scale": "y",
+				    "properties": {
+						"ticks": {
+							"stroke": {"value":"#eee"}
+						},
+						"labels": {
+							"fill": {"value": "#eee"},
+							"fontSize": {"value": 20}
+						}
+					}
+				}
+			],
+			"properties": {
+				"update": {
+					"x": {"value":0},
+					"y": {"scale": "g", "field": "key"},
+					"height": {"scale": "g", "band": true},
+					"width": {"group": "width"},
+					"stroke": {"value": "#ccc"}
+				}
+			},
+			"marks":[
+				{
+					"type": "rect",
+					"from": { "transform": [{"type":"filter", "test":"datum.try==0 && datum.done==0"}] },
+					"properties": {
+						"update": {
+							"x": {"scale": "x", "field": "send"},
+							"x2": {"scale": "x", "field": "receive"},
+							"y": {"scale": "y", "field": "bytes"},
+							"y2": {"scale": "y", "value": 0},
+							"stroke": { "scale":"color", "field":"name"},
+							"fill": { "scale":"color", "field":"name" },
+							"strokeWidth": {"value": 2}
+						}
+					}
+				},
+				{
+					"type": "rect",
+					"from": { "transform": [
+						{"type":"filter", "test":"datum.try==1"},
+						{"type":"filter", "test":"datum.done==0"}
+					] },
+					"properties": {
+						"update": {
+							"x": {"scale": "x", "field": "send"},
+							"x2": {"scale": "x", "field": "receive"},
+							"y": {"scale": "y", "field": "bytes"},
+							"y2": {"scale": "y", "value": 0},
+							"stroke": { "value": "#000" },
+							"fill": { "value": "#ccc" },
+							"fillOpacity": {"value":0.5 },
+							"strokeOpacity": {"value":0.5 },
+							"strokeWidth": {"value": 2}
+						}
+					}
+				}
+			]
+		}]
+}

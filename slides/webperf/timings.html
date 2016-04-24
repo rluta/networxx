@@ -1,0 +1,27 @@
+<h2>Home Page Tapiocorp</h2>
+<div class="row center">
+    <chart type="vega-lite">
+        <spec>
+            {
+                "data":{"url":"/data/perf-web.json"},
+                "mark":"line",
+                "encoding": {
+                    "x": {"field":"percentile","type":"quantitative","axis":{"title":"Percentiles"}},
+                    "y": {"field":"timing","type":"quantitative","axis":{"title":"Temps mesuré (ms)"}},
+                    "color":{"field":"type","type":"nominal","legend":false,"scale":{"range":["#b10142","orange"]}}
+                },
+                "config": {
+                    "mark": {
+                        "strokeWidth":5
+                    }
+                }
+            }
+        </spec>
+    </chart>
+    <div>
+        <ul style="list-style: none; margin-left: 0; padding-left: 0">
+            <li style="color: #b10142">Page Load</li>
+            <li style="color: orange">TTFB (Time to first byte)</li>
+        </ul>
+    </div>
+</div>

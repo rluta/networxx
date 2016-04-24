@@ -1,0 +1,43 @@
+<h2>Temps de chargement d'une page</h2>
+<div class="flex-column center">
+    <p>Latence constante 60 ms, bande passante variable</p>
+    <div class="centered">
+        <chart type="vega-lite">
+            <spec>
+                {
+                "data":{"url":"/data/plt-vary-bw.json"},
+                "mark":"bar",
+                "encoding":{
+                "x": { "field": "bw_mbps", "type": "ordinal", "scale": { "bandSize": 100 },"axis":{"title":""}},
+                "y": { "field": "plt_ms", "type": "quantitative","axis":{"title":"Temps (ms)"} },
+                "color": {"field":"ref","type":"nominal","scale":{"range":["#b10142","orange"]},"legend":false}
+                },
+                "config": {
+                "cell": { "height": 275 }
+                }
+                }
+            </spec>
+        </chart>
+    </div>
+    <p>Bande passante constante 5 Mbps, latence variable</p>
+    <div class="centered">
+        <chart type="vega-lite">
+            <spec>
+                {
+                "data":{"url":"/data/plt-vary-lat.json"},
+                "mark":"bar",
+                "encoding":{
+                "x": { "field":"lat_ms", "type": "ordinal", "scale": { "bandSize": 100 },
+                "sort":"descending", "axis":{"title":""}
+                },
+                "y": { "field":"plt_ms", "type": "quantitative","axis":{"title":"Temps (ms)"} },
+                "color": {"field":"ref","type":"nominal","scale":{"range":["#b10142","orange"]},"legend":false}
+                },
+                "config": {
+                "cell": { "height": 275 }
+                }
+                }
+            </spec>
+        </chart>
+    </div>
+</div>
