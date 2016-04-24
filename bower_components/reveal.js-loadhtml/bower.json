@@ -1,0 +1,19 @@
+{
+  "name": "reveal.js-loadhtml",
+  "authors": [
+    "Raphael Luta <raphael.luta@aptiwan.com>"
+  ],
+  "description": "Reveal.js plugins for loading external HTML slides (with script support)",
+  "main": "loadhtmlslides.js",
+  "moduleType": [],
+  "license": "Apache 2",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
+}
