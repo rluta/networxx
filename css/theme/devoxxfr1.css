@@ -351,7 +351,7 @@ html.topbanner body {
 
 /* intro slides */
 html.intro .slides {
-  background: url("/lib/theme/devoxxfr1/background_1920_1080_HD.jpg");
+  background: url("../../lib/theme/devoxxfr1/background_1920_1080_HD.jpg");
 }
 
 html.intro .slides section h1 {
@@ -395,7 +395,7 @@ html.content .slides section h1 {
   position:absolute;
   bottom: 0px;
   width: 100%;
-  background: url("/lib/theme/devoxxfr1/footer_engrenage.jpg") center top;
+  background: url("../../lib/theme/devoxxfr1/footer_engrenage.jpg") center top;
   z-index: 10;
 }
 
