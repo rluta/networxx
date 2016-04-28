@@ -1,5 +1,5 @@
 <h2>Performance API</h2>
-<pre><code>document.addEventListener('load',function () {
+<pre><code>window.addEventListener('load',function () {
     var t = window.performance.timing, metrics = [];
     metrics.push({name:'ttfb',value:t.responseStart - t.fetchStart});
     metrics.push({name:'dom',value:t.loadEventStart - t.domLoading});
