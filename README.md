@@ -29,7 +29,7 @@ To run the presentation locally:
 
 
     git clone https://github.com/rluta/networxx.git  
-    (cd networxx-reveal && npm install && bower install)
+    (cd networxx && npm install && bower install)
   
   
  * Start the tty server
@@ -47,6 +47,6 @@ To run the presentation locally:
  * Start the reveal.js presentation
  
  
-    cd networxx-reveal && grunt serve
+    cd networxx && grunt serve
    
    
