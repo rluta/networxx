@@ -28,7 +28,7 @@ To run the presentation locally:
  * Clone this repository and install the npm dependencies
 
 
-    git clone https://github.com/networxx/networxx-reveal.git  
+    git clone https://github.com/rluta/networxx.git  
     (cd networxx-reveal && npm install && bower install)
   
   
