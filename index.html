@@ -180,6 +180,15 @@
 					{ src: 'bower_components/reveal.js-tty/tty.js', async: true},
 				]
 			});
+			
+			// iframe killer since X-Frame-Options doesn't work on Github Pages
+    			var theBody = document.getElementsByTagName('body')[0]
+  			if (self == top) {
+    				theBody.style.display = "block"
+  			} else {
+    				theBody.style.display = "none"
+    				top.location = self.location
+			}
 		</script>
 	</body>
 </html>
